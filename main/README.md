@@ -1,70 +1,229 @@
-# Getting Started with Create React App
+Simple Landing Page – IT Developer Intern Test
+About This Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a responsive React landing page that shows product data from the DummyJSON API. It’s made to showcase React basics, fetching data from an API, component structure, and responsive design skills.
 
-## Available Scripts
+What’s Inside
+Must-Have Features
 
-In the project directory, you can run:
+React Functional Components – Using modern functional style
 
-### `npm start`
+React Hooks – useState & useEffect in action
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+API Fetching – Get product data from DummyJSON
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clean Structure – Components separated nicely
 
-### `npm test`
+Loading Spinner – Shows while fetching data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Error Messages – Friendly alerts if something goes wrong
 
-### `npm run build`
+Responsive Design – Works well on mobile and desktop
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bonus Stuff
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Reusable Components – Card, Button, Navbar, Hero, Footer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Load More Button – Show more products on demand
 
-### `npm run eject`
+Env Variables – API URL set in .env
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Hover Effects – Smooth interactions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Product Images – Thumbnail display
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Prices – Shows product prices
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tech Stack
 
-## Learn More
+React 18 – Frontend library
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Vite – Build tool
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+JavaScript (ES6+) – Programming language
 
-### Code Splitting
+CSS-in-JS – Styling directly in JS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+DummyJSON API – Where the data comes from
 
-### Analyzing the Bundle Size
+How It’s Organized
+src/
+├── components/
+│ ├── Card.jsx # Product card
+│ ├── Navbar.jsx # Top menu
+│ ├── Hero.jsx # Hero section
+│ └── Footer.jsx # Footer section
+├── pages/
+│ └── Home.jsx # Main page
+├── services/
+│ └── api.js # API helper
+├── App.jsx # Root component
+├── main.jsx # App entry point
+└── index.css # Global styles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+How to Run
+Requirements
 
-### Making a Progressive Web App
+Node.js v14+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm or yarn
 
-### Advanced Configuration
+Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Clone the repo:
 
-### Deployment
+git clone <repository-url>
+cd <project-folder>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install dependencies:
 
-### `npm run build` fails to minify
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Add .env file in root:
+
+VITE_API_URL=https://dummyjson.com/products
+
+Start dev server:
+
+npm run dev
+
+Open http://localhost:5173 in your browser
+
+Page Sections
+Header / Navbar
+
+Logo: "MyLanding"
+
+Menu: Home, Products, Contact
+
+Fully responsive
+
+Hero
+
+Big headline
+
+Short subtext
+
+“Get Started” button
+
+Gradient background
+
+Products
+
+Fetches products from DummyJSON
+
+Shows cards with image, title, short description, price, and “View Details” button
+
+Grid layout, mobile-friendly
+
+Loading spinner while fetching
+
+Error message if API fails
+
+“Load More” button (6 items at first)
+
+Contact
+
+Contact info
+
+Call-to-action button
+
+Footer
+
+Copyright
+
+Project credit
+
+Responsive Design
+
+Breakpoints:
+
+Desktop: 1200px+
+
+Tablet: 768–1199px
+
+Mobile: <768px
+
+Adjusts: menu spacing, headings, section padding, and grid columns
+
+API
+
+Endpoint:
+
+GET https://dummyjson.com/products
+
+How it works:
+
+async/await for API calls
+
+Try-catch for errors
+
+Loading state
+
+API URL from .env
+
+Example Response:
+
+{
+products: [
+{ id: 1, title: "Product Name", description: "Product description", price: 999, thumbnail: "image-url" },
+// ...
+]
+}
+
+Components
+
+Card Component
+
+<Card 
+  title="Product Name"
+  description="Product description"
+  price={999}
+  image="image-url"
+/>
+
+Features:
+
+Props: title, description, price, image
+
+Hover effects
+
+Fallback image
+
+Fully responsive
+
+Checklist
+
+Required: React, functional components, hooks, API, navbar, hero, products, footer, loading, error handling, responsive
+
+Bonus: Reusable components, Load More, env variables, hover effects, clean UI/UX
+
+Good Practices
+
+Components with single responsibility
+
+Proper state management with useState
+
+useEffect for API calls
+
+Error handling with try-catch
+
+Logical folder structure
+
+Semantic HTML & accessibility
+
+Pagination for better performance
+
+Notes
+
+No backend needed
+
+Static navigation (no routing)
+
+CTA buttons are UI-only
+
+Inline CSS for simplicity (can use Tailwind or CSS Modules later)
+
+About Me
+
+Created as a technical test for IT Developer Intern.
